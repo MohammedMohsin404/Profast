@@ -1,6 +1,7 @@
 import { Urbanist } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const urbanist = Urbanist({
   variable: "--font-urbanist",
@@ -19,12 +20,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="bg-[#EAECED]">
       <body
-        className={` w-11/12 mx-auto`}
+        className={` w-11/12 mx-auto p-[50]`}
       >
         <header className="mt-8">
           <Navbar />
         </header>
         {children}
+
+        <Footer/> 
       </body>
     </html>
   );
