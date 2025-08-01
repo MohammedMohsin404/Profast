@@ -22,12 +22,12 @@ const Supports = () => {
   return (
     <section className=" mt-15 py-20    border-r-0 border-l-0 border-dashed border-2 border-[#03373D]">
       {supports.map(support=>(
-        <div key={support.title} className="flex  mt-6 pr-11 bg-white p-8 divide-x-3 divide-dashed divide-[#03373D]">
+        <div key={support.title} className="flex flex-col md:flex-row divide-x-0 mt-6 pr-11 bg-white p-8 md:divide-x-3 space-y-8 divide-dashed divide-[#03373D]">
             <Image  src={support.img} 
             alt={support.title}
             height="202"
             width="196"
-            className="pr-11"
+            className="md:pr-11 self-center-safe"
             />
 
 
