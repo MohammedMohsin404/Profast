@@ -69,13 +69,18 @@ const Footer = () => {
         time, every time.
       </p>
 
-      <ul className="menu menu-horizontal px-1">
+        <div className="border w-full border-dashed border-[#03464D]"> </div>
+
+
+      <ul className="menu menu-horizontal px-1 ">
         {items.map((i,x) => (
           <li key={x} className="text-base font-medium text-[#DADADA]">
             <Link href={i.path}>{i.name}</Link>
           </li>
         ))}
       </ul>
+
+          <div className="border w-full border-dashed border-[#03464D]"></div>
 
 
 

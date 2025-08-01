@@ -6,9 +6,8 @@ import Footer from "./components/Footer";
 const urbanist = Urbanist({
   variable: "--font-urbanist",
   weight: ["400", "500", "600", "700"],
-   subsets: ['latin'],
-     display: "swap",
-  
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata = {
@@ -19,15 +18,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="bg-[#EAECED]">
-      <body
-        className={` w-11/12 mx-auto `}
-      >
+      <body className={`${urbanist.variable} w-11/12 mx-auto`}>
         <header className="mt-8">
           <Navbar />
         </header>
         {children}
-
-        <Footer/> 
+        <Footer />
       </body>
     </html>
   );

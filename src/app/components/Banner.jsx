@@ -6,7 +6,7 @@ function Banner() {
       <div className="carousel w-full">
         <div id="slide3" className="carousel-item relative w-full">
           <Image
-          alt="Banner Image"
+                  alt="Banner Image"
             width="677"
             height="1500"
             src="/banner/banner1.png"

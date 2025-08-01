@@ -57,8 +57,10 @@ export default function Navbar() {
             <Link href={i.path} >{i.name}</Link>
           </li>))}
            <Link href="/" className="btn btn-outline rounded-xl text-xl px-8 py-4 border-[#DADADA] min-h-[56]"> Sign In</Link>
-        <Link href="/" className="btn btn-outline rounded-xl text-xl bg-[#CAEB66] px-8 py-4 border-0 min-h-[56]"> Be a Rider</Link>
+      <div className="flex">
+          <Link href="/" className="btn btn-outline rounded-xl text-xl bg-[#CAEB66] px-8 py-4 border-0 min-h-[56]"> Be a Rider</Link>
         <Image className="" src={upperRight} alt="Icon" width={56} height={56} />
+      </div>
           </ul>
         </div>
         <Link href="/" className="btn btn-ghost text-3xl font-extrabold">
@@ -78,8 +80,8 @@ export default function Navbar() {
       </div>
       <div className="navbar-end space-x-4 hidden md:flex">
         <Link href="/" className="btn  rounded-xl text-xl px-8 py-4 border-[#DADADA] min-h-[56] hover:bg-[#CAEB66] "> Sign In</Link>
-        <Link href="/" className="btn btn-outline rounded-xl text-xl bg-[#CAEB66]  px-8 py-4 border-0 min-h-[56]"> Be a Rider</Link>
-        <Image className="" src={upperRight} alt="Icon" width={56} height={56} />
+        <div className="flex"><Link href="/" className="btn btn-outline rounded-xl text-xl bg-[#CAEB66]  px-8 py-4 border-0 min-h-[56]"> Be a Rider</Link>
+        <Image className="" src={upperRight} alt="Icon" width={56} height={56} /></div>
       </div>
     </div>
   );
