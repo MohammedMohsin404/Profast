@@ -17,19 +17,21 @@ const Brands = () => {
       <h2 className="text-4xl text-center font-extrabold">
         We've helped thousands of sales teams
       </h2>
-      <div className=" mt-11 flex items-center justify-around ">
+      <div className=" mt-11 gap-4  justify-items-center grid grid-cols-3 md:grid-cols-6 ">
         {brands.map(brand=>(
             <Image
+            key={brand.name}
             src={brand.name}
             width="123"
             height="24"
             alt="Brnad"
+            className=""
             
             />
         ))}
       </div>
 
-      <div className="border border-[#03464D] border-dashed mt-[100]"></div>
+      
     </section>
   );
 };

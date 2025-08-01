@@ -80,7 +80,7 @@ const Footer = () => {
 
 
 
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal px-1 ">
         {socials.map((i,x) => (
           <li key={x} className="text-base font-medium text-[#DADADA]">
             <Link href={i.path}><Image src={i.src} alt={i.name} width="36" height="36" /></Link>

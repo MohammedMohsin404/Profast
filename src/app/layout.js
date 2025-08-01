@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="bg-[#EAECED]">
       <body
-        className={` w-11/12 mx-auto p-[50]`}
+        className={` w-11/12 mx-auto `}
       >
         <header className="mt-8">
           <Navbar />
