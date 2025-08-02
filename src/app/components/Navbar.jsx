@@ -72,7 +72,7 @@ export default function Navbar() {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           
-            {items.map(i=>( <li key={i.path} className="text-base font-medium text-[#606060]">
+            {items.map(i=>( <li key={i.path} className="text-base hover:bg-[#CAEB66]  rounded-full font-medium text-[#606060]">
             <Link href={i.path}>{i.name}</Link>
           </li>))}
          
