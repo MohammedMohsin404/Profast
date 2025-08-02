@@ -6,11 +6,7 @@ import {
   PrevButton,
   usePrevNextButtons,
 } from "./CarouselArrowButtons";
-// import {
-//   NextButton,
-//   PrevButton,
-//   usePrevNextButtons,
-// } from "./EmblaCarouselArrowButtons";
+
 import { DotButton, useDotButton } from "./CarouselDotButton";
 import Image from "next/image";
 

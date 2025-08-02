@@ -3,6 +3,7 @@ import Brands from "./components/Brands";
 import CustomersReviews from "./components/CustomersReviews";
 import Faq from "./components/Faq";
 
+
 import Merchant from "./components/Merchant";
 import Services from "./components/Services";
 import Supports from "./components/Supports";

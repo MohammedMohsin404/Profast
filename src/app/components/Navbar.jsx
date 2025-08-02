@@ -24,7 +24,7 @@ export default function Navbar() {
     },
     {
       name: "Be a Rider",
-      path: "/be-a-Rider",
+      path: "/be-a-rider",
     },
   ];
 

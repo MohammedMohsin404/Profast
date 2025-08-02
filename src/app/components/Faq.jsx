@@ -1,8 +1,11 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import { useState } from "react";
 
 const Faq = (props) => {
   const { faqs } = props;
+
+  const [showAll, setShowAll] = useState(false);
   return (
     <section className="mt-15 space-y-8 ">
       <h2 className="font-extrabold text-center text-[#03373D] text-4xl">
@@ -14,7 +17,7 @@ const Faq = (props) => {
         ease!
       </p>
 
-      {faqs.map((faq) => (
+      {(showAll ? faqs : faqs.slice(0, 5)).map((faq) => (
         <div
           key={faq.id}
           className=" collapse collapse-arrow bg-[#E6F2F3] border border-[#067A87] rounded-2xl"
@@ -32,8 +35,11 @@ const Faq = (props) => {
       ))}
 
       <div className="flex justify-center">
-        <button className="btn bg-[#CAEB66] text-xl font-bold btn-xl rounded-2xl">
-          See Morw FAQ's
+        <button
+          onClick={() => setShowAll(!showAll)}
+          className="btn bg-[#CAEB66] text-xl font-bold btn-xl rounded-2xl"
+        >
+          {showAll ? "See Less FAQ's " : "See More FAQ's"}
         </button>
         <Image src="/upperRight.png" alt="Upper Right" width="56" height="56" />
       </div>
