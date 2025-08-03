@@ -1,5 +1,11 @@
+"use client";
+
 import React from "react";
-import LeafletMap from "../components/LeafletMap";
+import dynamic from "next/dynamic";
+
+const LeafletMap = dynamic(() => import("../components/LeafletMap"), {
+  ssr: false,
+});
 
 const page = () => {
   return (
@@ -38,6 +44,7 @@ const page = () => {
             Search
           </button>
         </div>
+
         <div className="space-y-14 mt-14">
           <h2 className="font-extrabold text-[#03373D] text-2xl md:text-3xl md:text-left text-center">
             We deliver almost all over Bangladesh
