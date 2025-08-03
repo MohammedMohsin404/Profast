@@ -71,23 +71,23 @@ const Page = () => {
   };
 
   return (
-    <section className="mt-15 bg-white rounded-2xl p-24">
+    <section className="mt-15 bg-white rounded-2xl lg:p-24 p-12 ">
       <div className="space-y-6">
-        <h2 className="font-extrabold text-[#03373D] text-5xl">
+        <h2 className="font-extrabold text-[#03373D] text-center lg:text-left text-3xl md:text-4xl lg:text-5xl">
           Pricing Calculator
         </h2>
-        <p className="w-3/6 text-[#606060] text-base">
+        <p className="lg:w-2/6 text-center lg:text-left text-[#606060] text-base">
           Enjoy fast, reliable parcel delivery with real-time tracking and zero
           hassle. From personal packages to business shipments — we deliver on
           time, every time.
         </p>
       </div>
       <div className="mt-12 pt-12 border-t-2 border-[#00000026]">
-        <h3 className="text-[#03373D] font-bold text-3xl text-center">
+        <h3 className="text-[#03373D] font-bold lg:text-3xl text-2xl  text-center">
           Calculate Your Cost
         </h3>
-        <div className="flex">
-          <div className="flex w-6/12 justify-center items-center ">
+        <div className="flex flex-col-reverse lg:flex-row mt-8">
+          <div className="flex lg:w-6/12 justify-center items-center ">
             <form onSubmit={handleSubmit} className="w-3/6 space-y-4">
               <fieldset className="fieldset w-full">
                 <legend className="fieldset-legend text-sm text-[#0F172A]">
@@ -165,8 +165,8 @@ const Page = () => {
               {feedback && <p className="text-green-600 mt-2">{feedback}</p>}
             </form>
           </div>
-          <div className="flex w-6/12 justify-center items-center">
-            <h1 className="text-[#000000] font-extrabold text-8xl">
+          <div className="flex lg:w-6/12   justify-center items-center">
+            <h1 className="text-[#000000] font-extrabold text-5xl md:text-6xl lg:text-8xl">
               {price !== null ? `${price} TK` : "-- TK"}
             </h1>
           </div>

@@ -3,10 +3,10 @@ import React from "react";
 const page = () => {
 
   return (
-    <section className="mt-15 bg-white rounded-2xl p-24">
+    <section className="mt-15 bg-white rounded-2xl lg:p-24 p-12">
       <div className="space-y-6">
-        <h2 className="font-extrabold text-[#03373D] text-5xl">About Us</h2>
-        <p className="w-3/6 text-[#606060] text-base">
+        <h2 className="font-extrabold text-[#03373D] md:text-4xl text-3xl text-center lg:text-left lg:text-5xl">About Us</h2>
+        <p className="lg:w-3/6 text-[#606060] text-base text-center lg:text-left">
           Enjoy fast, reliable parcel delivery with real-time tracking and zero
           hassle. From personal packages to business shipments — we deliver on
           time, every time.

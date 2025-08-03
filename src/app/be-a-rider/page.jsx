@@ -54,22 +54,22 @@ const Page = () => {
 
   return (
     <section className="mt-15 bg-white rounded-3xl p-24">
-      <div className="space-y-8">
-        <h3 className="font-bold text-4xl text-[#03373D]">Be a Rider</h3>
-        <p className="text-base text-[#606060] w-3/6">
+      <div className=" flex flex-col justify-center  space-y-8">
+        <h3 className="font-bold text-4xl text-[#03373D] ">Be a Rider</h3>
+        <p className="text-base text-[#606060] md:w-3/6 ">
           Enjoy fast, reliable parcel delivery with real-time tracking and zero
           hassle. From personal packages to business shipments — we deliver on
           time, every time.
         </p>
       </div>
 
-      <div className="flex">
-        <div className="w-6/12 mt-8">
-          <h3 className="text-2xl font-extrabold text-[#03373D]">
+      <div className="flex flex-col-reverse lg:flex-row justify-center lg:justify-around">
+        <div className=" mt-8">
+          <h3 className="text-2xl font-extrabold text-[#03373D] text-center lg:text-left">
             Tell us about yourself
           </h3>
           <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="flex space-x-6">
+            <div className="flex flex-col lg:flex-row space-x-6">
               <fieldset className="fieldset w-full">
                 <legend className="fieldset-legend text-sm text-[#0F172A]">
                   Your Name
@@ -101,7 +101,7 @@ const Page = () => {
               </fieldset>
             </div>
 
-            <div className="flex space-x-6">
+            <div className="flex flex-col lg:flex-row  space-x-6">
               <fieldset className="fieldset w-full">
                 <legend className="fieldset-legend text-sm text-[#0F172A]">
                   Your Email
@@ -144,7 +144,7 @@ const Page = () => {
               </fieldset>
             </div>
 
-            <div className="flex space-x-6">
+            <div className="flex flex-col lg:flex-row  space-x-6">
               <fieldset className="fieldset w-full">
                 <legend className="fieldset-legend text-sm text-[#0F172A]">
                   NID No
@@ -268,7 +268,7 @@ const Page = () => {
           </form>
         </div>
 
-        <div className="flex w-6/12 justify-center">
+        <div className="flex  justify-center">
           <Image
             src="/agent-pending.png"
             alt="Agent Pending"
