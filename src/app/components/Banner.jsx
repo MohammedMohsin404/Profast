@@ -28,7 +28,7 @@ const banners = [
 function Banner() {
   return (
     <section className="mt-15 ">
-      <div className="carousel w-full">
+      <div className="carousel">
         {banners.map((banner) => (
           <div key={banner.id}   width="677"
               height="1500" className="carousel-item relative w-full">
