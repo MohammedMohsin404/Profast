@@ -15,7 +15,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="bg-[#EAECED]">
+    <html lang="en">
       <body className={`${urbanist.variable} `}>
         
         {children}
