@@ -1,4 +1,5 @@
 "use client";
+import { registerUser } from "@/app/actions/auth/registerUser";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -27,7 +28,9 @@ const RegisterForm = () => {
     setFeedback("");
 
     try {
-      console.log("Form Submitted:", formData);
+      registerUser( formData);
+      //  registerUser("Form Submitted:");
+
       // TODO: Send formData to API/backend
       setFeedback("Form submitted successfully ✅");
       setFormData({ name: "", email: "", password: "" });
@@ -106,23 +109,32 @@ const RegisterForm = () => {
         {feedback && (
           <p
             className={`text-sm ${
-              feedback.includes("successfully") ? "text-green-600" : "text-red-600"
+              feedback.includes("successfully")
+                ? "text-green-600"
+                : "text-red-600"
             }`}
           >
             {feedback}
           </p>
         )}
       </form>
-      <p>Already have an account? <Link href='/login' className="text-[#CAEB66]">Login</Link></p>
-           {/* Google Register Button */}
-           <p className="text-center text-[#71717A] font-bold">Or</p>
+      <p>
+        Already have an account?{" "}
+        <Link href="/login" className="text-[#CAEB66]">
+          Login
+        </Link>
+      </p>
+      {/* Google Register Button */}
+      <p className="text-center text-[#71717A] font-bold">Or</p>
       <button
         type="button"
         // onClick={handleGoogleRegister}
         className="btn flex w-full"
       >
         <Image src="/google-logo.png" alt="Google" width={24} height={24} />
-        <span className="text-sm font-medium text-gray-700">Register with Google</span>
+        <span className="text-sm font-medium text-gray-700">
+          Register with Google
+        </span>
       </button>
     </section>
   );
