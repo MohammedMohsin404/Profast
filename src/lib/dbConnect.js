@@ -1,16 +1,19 @@
 import { MongoClient, ServerApiVersion } from "mongodb";
 
 export const collectionNamesObj={
-  userCollection:"user"
+  userCollection:"users"
 }
 
-export default dbConnect = (collectionName) => {
+export default function dbConnect(collectionName) {
   const uri = process.env.MONGODB_URI;
   const client = new MongoClient(uri, {
     serverApi: {
       version: ServerApiVersion.v1,
       strict: true,
       deprecationErrors: true,
+        ssl: true,
+  tlsAllowInvalidCertificates: false,
+  minTLSVersion: "TLSv1.2"
     },
   });
   return client.db(process.env.DB_NAME).collection(collectionName)
