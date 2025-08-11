@@ -79,7 +79,7 @@ export default function Navbar() {
         </ul>
       </div>
       <div className="navbar-end space-x-4 hidden md:flex">
-        <Link href="/signin" className="btn btn-sm rounded-xl text-xl px-8 py-4 border-[#DADADA] min-h-[56] hover:bg-[#CAEB66] "> Sign In</Link>
+        <Link href="/login" className="btn btn-sm rounded-xl text-xl px-8 py-4 border-[#DADADA] min-h-[56] hover:bg-[#CAEB66] "> Sign In</Link>
         <div className="flex"><Link href="/" className="btn btn-outline rounded-xl text-xl bg-[#CAEB66]  px-8 py-4 border-0 min-h-[56]"> Be a Rider</Link>
         <Image className="" src={upperRight} alt="Icon" width={56} height={56} /></div>
       </div>

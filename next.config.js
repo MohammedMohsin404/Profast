@@ -1,6 +1,13 @@
 // next.config.js
 module.exports = {
+ 
   images: {
-    domains: ['i.pravatar.cc'],
-  },
+  remotePatterns: [
+    {
+      protocol: "https",
+      hostname: "i.pravatar.cc",
+    },
+  ],
+}
+
 };
