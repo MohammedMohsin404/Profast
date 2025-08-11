@@ -3,6 +3,7 @@ import { registerUser } from "@/app/actions/auth/registerUser";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import toast from "react-hot-toast";
 
 const RegisterForm = () => {
   const [formData, setFormData] = useState({
@@ -32,10 +33,10 @@ const RegisterForm = () => {
       //  registerUser("Form Submitted:");
 
       // TODO: Send formData to API/backend
-      setFeedback("Form submitted successfully ✅");
+      toast.success("Form submitted successfully ✅");
       setFormData({ name: "", email: "", password: "" });
     } catch (err) {
-      setFeedback("Something went wrong ❌");
+      toast.error("Something went wrong ❌");
     } finally {
       setLoading(false);
     }

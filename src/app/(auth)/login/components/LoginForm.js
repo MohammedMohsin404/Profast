@@ -20,6 +20,7 @@ const LoginForm = () => {
     setFormData((prev) => ({
       ...prev,
       [name]: value,
+      callbackUrl: "/"
     }));
   };
 
@@ -29,16 +30,13 @@ const LoginForm = () => {
     setFeedback("");
 
     try {
-      // registerUser( formData);
-      console.log(formData);
-      await signIn(formData)
-      //  registerUser("Form Submitted:");
-
-      // TODO: Send formData to API/backend
-      setFeedback("Form submitted successfully ✅");
+     
+      await signIn("credentials", formData)
+    
+      toast.success("Form submitted successfully ✅");
       setFormData({ name: "", email: "", password: "" });
     } catch (err) {
-      setFeedback("Something went wrong ❌");
+      toast.error("Something went wrong ❌");
     } finally {
       setLoading(false);
     }
@@ -118,6 +116,7 @@ const LoginForm = () => {
       <p className="text-center text-[#71717A] font-bold">Or</p>
       <button
         type="button"
+        onClick={()=>signIn("google",{callbackUrl: "/"})}
         // onClick={handleGoogleRegister}
         className="btn flex w-full"
       >

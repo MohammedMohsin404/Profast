@@ -26,5 +26,5 @@ export async function registerUser(payload) {
     };
   }
 
-  return { success: false };
+  return null;
 }

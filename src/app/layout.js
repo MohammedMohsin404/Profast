@@ -2,6 +2,10 @@ import { Urbanist } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Toaster } from "react-hot-toast";
+import NextAuthProvider from "@/Providers/NextAuthProvider";
 
 const urbanist = Urbanist({
   variable: "--font-urbanist",
@@ -19,11 +23,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="bg-[#EAECED]">
       <body className={`${urbanist.variable} w-11/12 mx-auto`}>
-        <header className="mt-8">
-          <Navbar />
-        </header>
-        {children}
-        <Footer />
+        <NextAuthProvider>
+       
+          <Toaster position="	top-right" />
+          <header className="mt-8">
+            <Navbar />
+          </header>
+          {children}
+          <Footer />
+        </NextAuthProvider>
       </body>
     </html>
   );
